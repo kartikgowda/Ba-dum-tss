@@ -14,6 +14,6 @@
 //? Refactoring Selections of all Buttons
 document.querySelectorAll('button').forEach((button) => {
   button.addEventListener('click', function () {
-    alert('I got clicked baby');
+    this.style.color = 'white';
   });
 });
