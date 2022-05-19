@@ -78,5 +78,5 @@ function buttonAnimation(currentKey) {
   //? Remove (.pressed) class after 500ms
   setTimeout(() => {
     key.classList.remove('pressed');
-  }, 500);
+  }, 100);
 }
