@@ -1,15 +1,4 @@
-// document.querySelector('.drum').addEventListener('click', function () {
-//   alert('You clicked a button!');
-// });
-
-// let numberOfButtons = document.querySelectorAll('.drum');
-
-// // //? Selecting all the buttons
-// for (let i = 0; i < numberOfButtons.length; i++) {
-//   numberOfButtons[i].addEventListener('click', function () {
-//     alert('You have been clicked');
-//   });
-// }
+//TODO: Add delay between keys pressed down on the keyboard for playing sounds
 
 //! Mouse Click Event Capture
 //? Refactoring Selections of all Buttons
@@ -75,8 +64,21 @@ function buttonAnimation(currentKey) {
   //? Adding .pressed class
   key.classList.add('pressed');
 
-  //? Remove (.pressed) class after 500ms
+  //? Remove (.pressed) class after 100ms
   setTimeout(() => {
     key.classList.remove('pressed');
   }, 100);
 }
+
+//* Test Code
+//   alert('You clicked a button!');
+// });
+
+// let numberOfButtons = document.querySelectorAll('.drum');
+
+// // //? Selecting all the buttons
+// for (let i = 0; i < numberOfButtons.length; i++) {
+//   numberOfButtons[i].addEventListener('click', function () {
+//     alert('You have been clicked');
+//   });
+// }
