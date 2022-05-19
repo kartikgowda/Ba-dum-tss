@@ -17,6 +17,7 @@ document.querySelectorAll('button').forEach((button) => {
   button.addEventListener('click', function () {
     buttonClick = this.innerHTML;
     playSound(buttonClick);
+    buttonAnimation(buttonClick);
   });
 });
 
@@ -24,6 +25,7 @@ document.querySelectorAll('button').forEach((button) => {
 document.addEventListener('keydown', function (e) {
   //? Callback function for input
   playSound(e.key);
+  buttonAnimation(e.key);
 });
 
 //! Function To Play Drum Sounds
@@ -60,7 +62,21 @@ function playSound(key) {
 
     default:
       // alert('BAD DRUMMER');
+
       break;
   }
+}
 
+//! Adding Button Animation for Feedback
+function buttonAnimation(currentKey) {
+  //? Getting the CSS Class
+  let key = document.querySelector('.' + currentKey); //* Example Output: <button class="w drum">w</button>
+
+  //? Adding .pressed class
+  key.classList.add('pressed');
+
+  //? Remove (.pressed) class after 500ms
+  setTimeout(() => {
+    key.classList.remove('pressed');
+  }, 500);
 }
